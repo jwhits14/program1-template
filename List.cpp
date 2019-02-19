@@ -1,5 +1,4 @@
 #include "List.h"
-#include "Planet.h"
 #include <iostream>
 
 using namespace std;
@@ -62,7 +61,7 @@ Planet* List::read(int index) {
 	Node * temp;
 
 	if(index >= size()) {
-		return NULL:
+		return NULL;
 	}
 
 	temp = this->head;
@@ -72,23 +71,22 @@ Planet* List::read(int index) {
 	retVal = temp->data;
 	return retVal;
 }
-//do I need to delete head and the next nodes prev as well? will this cause a memory leak if I dont?
 bool List::remove(int index) {
 	Node * temp;
 	if(index >= size()) {
 		return false;
 	}
-	if(index = size() - 1) {
+	if(index == size() - 1) {
 		temp = this->tail->prev;
 		delete this->tail;
 		this->tail = temp;
 		this->tail->next = NULL;
 	}
-	else if(index = 0) {
+	else if(index == 0) {
 		temp = this->head->next;
 		delete head;
 		this->head = temp;
-		this->head->prev = NULL:
+		this->head->prev = NULL;
 	}
 	else {
 		temp = this->head;

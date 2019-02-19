@@ -4,7 +4,7 @@
 class Planet {
     //not sure about the type of id, or the instructions labeling the return type of getID as "long int"
 	private:
-        int id;
+        long id;
 		int pos;
 		int distance;
 		char type; 
